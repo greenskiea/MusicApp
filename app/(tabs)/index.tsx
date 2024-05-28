@@ -1,71 +1,227 @@
 import * as React from 'react';
-import { View, StyleSheet, Image, Button, TouchableOpacity } from 'react-native';
-
-interface ImageProps {
-    uri: string;
-    style: object;
-}
-
-const DisplayImage: React.FC<ImageProps> = ({ uri, style }) => (
-    <Image resizeMode="contain" source={{ uri }} style={style} />
-);
+import { View, StyleSheet, Image, ScrollView, TouchableHighlight } from 'react-native';
 
 import { Text } from 'react-native';
+import { unknownTrackIrl } from '@/constants/Image';
+import { TabBarIcon } from '@/components/navigation/TabBarIcon';
+
 
 const Started: React.FC = () => (
-    <View style={styles.container}>
-        <DisplayImage uri="https://cdn.builder.io/api/v1/image/assets/TEMP/6b4d6bf96687c33304905694f74af4f706f925a89d234fa5983bdf6142b1de41?apiKey=2242341d848e4f69b50b41ab30704fb3&" style={styles.mainImage} />
-        <View style={styles.Btn}>
-            <TouchableOpacity style={styles.button}>
-                <Text style={styles.buttonText}>
-                    Let Rock!
-                </Text>
-            </TouchableOpacity>
+
+    <View style={{
+        backgroundColor: 'black', flex: 1, paddingTop: '20%', paddingLeft: '5%', paddingRight: '5%'
+    }}>
+
+        <View>
+            <Text style={{ ...styles.TextTitle }}>Songs</Text>
         </View>
+
+        <ScrollView style={{ ...styles.SongScroll }}>
+            <TouchableHighlight style={{ ...styles.TouchSongScroll }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <View style={{ marginRight: 10 }}>
+                        <Image source={{
+                            uri: unknownTrackIrl,
+
+                        }}
+                            style={{
+                                ...styles.TrackWorkImage,
+                            }}
+
+                        />
+                    </View>
+
+                    <View style={{ flex: 1 }}>
+                        <Text numberOfLines={1}
+                            style={{
+                                ...styles.TrackTitleText,
+                                color: '#fff'
+                            }}
+                        >Song Title</Text>
+                        <Text numberOfLines={1}
+                            style={{
+                                ...styles.TrackTitleText,
+                                color: '#fff'
+                            }}
+                        >Artist Name</Text>
+                    </View>
+
+                    <View>
+                        <TabBarIcon name={'play'} color={'white'} />
+                    </View>
+                </View>
+            </TouchableHighlight>
+
+            <TouchableHighlight style={{ ...styles.TouchSongScroll }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <View style={{ marginRight: 10 }}>
+                        <Image source={{
+                            uri: unknownTrackIrl,
+
+                        }}
+                            style={{
+                                ...styles.TrackWorkImage,
+                            }}
+
+                        />
+                    </View>
+
+                    <View style={{ flex: 1 }}>
+                        <Text numberOfLines={1}
+                            style={{
+                                ...styles.TrackTitleText,
+                                color: '#fff'
+                            }}
+                        >Song Title</Text>
+                        <Text numberOfLines={1}
+                            style={{
+                                ...styles.TrackTitleText,
+                                color: '#fff'
+                            }}
+                        >Artist Name</Text>
+                    </View>
+
+                    <View>
+                        <TabBarIcon name={'play'} color={'white'} />
+                    </View>
+                </View>
+            </TouchableHighlight>
+
+            <TouchableHighlight style={{ ...styles.TouchSongScroll }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <View style={{ marginRight: 10 }}>
+                        <Image source={{
+                            uri: unknownTrackIrl,
+
+                        }}
+                            style={{
+                                ...styles.TrackWorkImage,
+                            }}
+
+                        />
+                    </View>
+
+                    <View style={{ flex: 1 }}>
+                        <Text numberOfLines={1}
+                            style={{
+                                ...styles.TrackTitleText,
+                                color: '#fff'
+                            }}
+                        >Song Title</Text>
+                        <Text numberOfLines={1}
+                            style={{
+                                ...styles.TrackTitleText,
+                                color: '#fff'
+                            }}
+                        >Artist Name</Text>
+                    </View>
+
+                    <View>
+                        <TabBarIcon name={'play'} color={'white'} />
+                    </View>
+                </View>
+            </TouchableHighlight>
+
+            <TouchableHighlight style={{ ...styles.TouchSongScroll }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <View style={{ marginRight: 10 }}>
+                        <Image source={{
+                            uri: unknownTrackIrl,
+
+                        }}
+                            style={{
+                                ...styles.TrackWorkImage,
+                            }}
+
+                        />
+                    </View>
+
+                    <View style={{ flex: 1 }}>
+                        <Text numberOfLines={1}
+                            style={{
+                                ...styles.TrackTitleText,
+                                color: '#fff'
+                            }}
+                        >Song Title</Text>
+                        <Text numberOfLines={1}
+                            style={{
+                                ...styles.TrackTitleText,
+                                color: '#fff'
+                            }}
+                        >Artist Name</Text>
+                    </View>
+
+                    <View>
+                        <TabBarIcon name={'play'} color={'white'} />
+                    </View>
+                </View>
+            </TouchableHighlight>
+
+            <TouchableHighlight style={{ ...styles.TouchSongScroll }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <View style={{ marginRight: 10 }}>
+                        <Image source={{
+                            uri: unknownTrackIrl,
+
+                        }}
+                            style={{
+                                ...styles.TrackWorkImage,
+                            }}
+
+                        />
+                    </View>
+
+                    <View style={{ flex: 1 }}>
+                        <Text numberOfLines={1}
+                            style={{
+                                ...styles.TrackTitleText,
+                                color: '#fff'
+                            }}
+                        >Song Title</Text>
+                        <Text numberOfLines={1}
+                            style={{
+                                ...styles.TrackTitleText,
+                                color: '#fff'
+                            }}
+                        >Artist Name</Text>
+                    </View>
+
+                    <View>
+                        <TabBarIcon name={'play'} color={'white'} />
+                    </View>
+                </View>
+            </TouchableHighlight>
+
+
+        </ScrollView>
     </View>
 );
 
 const styles = StyleSheet.create({
-    container: {
-        backgroundColor: '#000',
-        display: 'flex',
-        maxWidth: 480,
-        width: '100%',
-        paddingBottom: 80,
-        flexDirection: 'column',
-        alignItems: 'stretch',
-        margin: 'auto',
+    TextTitle: {
+        fontSize: 30,
+        color: 'white'
     },
-    mainImage: {
-        position: 'relative',
-        width: '100%',
-        aspectRatio: 0.65,
+
+    TrackWorkImage: {
+        borderRadius: 8,
+        width: 50,
+        height: 50,
     },
-    Btn: {
+
+    TrackTitleText: {
+        fontSize: 12,
+        fontWeight: '600',
+        maxWidth: '90%',
+    },
+
+    SongScroll: {
         marginTop: 20,
-        marginBottom: 40,
-        alignSelf: 'center',
-        position: 'relative',
-        maxWidth: '100%',
-        aspectRatio: 2.94,
     },
 
-    button: {
-        backgroundColor: "#eb4b4f",
-        padding: 15,
-        // Apply borderRadius to the button 
-        borderTopLeftRadius: 25,
-        borderTopRightRadius: 25,
-        borderBottomLeftRadius: 25,
-        borderBottomRightRadius: 25,
-        justifyContent: "center",
-        alignItems: "center",
-    },
-
-    buttonText: {
-        color: "white",
-        fontSize: 18,
-    },
+    TouchSongScroll: {
+        marginBottom: 10,
+    }
 });
 
 export default Started;
